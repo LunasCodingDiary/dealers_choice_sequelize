@@ -8,7 +8,7 @@ const morgan = require('morgan')
 const app = express()
 app.use(require('method-override')('_method'));
 app.use(express.urlencoded({extended:false}))
-app.use(morgan)
+app.use(morgan('dev'))
 
 //app.get(routing)
 app.get('/',(req, res, next)=> res.redirect('/api/films'))
